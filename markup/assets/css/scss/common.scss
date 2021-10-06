@@ -28,50 +28,182 @@
     clip-path: inset(50%);
 }
 
+.standard {
+    width: 1340px;
+    margin: 0 auto;
+}
 
+.inner_box {
+    @extend .standard
+}
 
+.top_title_box {
+    
+    padding: rem(50px);
+    color: $black0;
+    text-align: center;
+    h1 {
+        
+        font-size: rem(38px);
+    }
+    p {
+        margin-top: rem(30px);
+        font-size: rem(14px);
+        line-height: 1.79;
+    }
+}
 
+.main_goods_list {
+    display: flex;
+    justify-content: space-between;
+    & > li {
+        width: 421px;
+        background-color: #fff;
+        box-shadow: -12px 12px 0 #fafafa;
+        border: 1px solid #eee;
+        .img {
+            img {
+                width: 100%;
+            }
+        }
+        .cont {
+            padding: 15px 20px;
+            h2 {
+                color: $black2;
+                font-size: rem(20px);
+                font-weight: 700;
+                letter-spacing: -1px;
+            }
+            p {
+                margin: 5px 3.6px 5px 0;
+                color: $black3;
+                font-size: rem($body-fz);
+                line-height: 1.58;
+                font-weight: 300;
+            }
+            span {
+                display: block;
+                text-align: right;
+                font-family: $font-family-roboto;
+                del {
+                    color: $black6;
+                    font-size: rem(16px);
+                    font-weight: 300;
+                    margin-right: 5px;
+                }
+                strong {
+                    color: $black3;
+                    font-size: rem(20px);
+                    font-weight: 500;
+                    i {
+                        font-size: rem(14px);
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.title_box {
+    
+    padding: rem(63px) rem(50px) rem(43px);
+    color: $black3;
+    text-align: center;
+    h1 {
+        
+        font-size: rem(33px);
+        line-height: 1.48;
+        font-weight: 700;
+    }
+    p {
+        margin-top: rem(23px);
+        font-size: rem(20px);
+        line-height: 1.45;
+    }
+}
+.main_md_box {
+    padding-bottom: 105px;
+}
+.md_goods_list {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    & > li {
+        width: 262px;
+        box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.16);
+        background-color: #fff;
+        & > a {
+            display: block;
+            padding: 15px;
+        }
+        .img {
+            img {
+                width: 100%;
+            }
+        }
+        .cont {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "left right"
+            "bottom bottom";
+            padding: 16px 0 20px;
+            color: $black3;
+            h2 {
+                grid-area: left;
+                font-size: rem(20px);
+            }
+            p {
+                grid-area: bottom;
+                margin-top: 5px;
+                font-size: rem(14px);
+                line-height: 1.43;
+            }
+            span {
+                grid-area: right;
+                font-weight: normal;
+                text-align: right;
+                strong {
+                    font-size: rem(17px);
+                    font-weight: normal;
+                }
+                
+            }
+        }
+    }
+}
 
 
 /* media query */
 @media all and (min-width:1081px){
-    html{
-        font-size: 16px;
-    }
+    // html{
+    //     font-size: 16px;
+    // }
 }
 
 @media all and (max-width:1080px){
-    html{
-        font-size: 14px;
-    }
+    // html{
+    //     font-size: 14px;
+    // }
 }
 
 @media all and (max-width:768px){
-    html{
-        font-size: 13px;
-    }
+    // html{
+    //     font-size: 13px;
+    // }
 }
 
 @media all and (max-width:640px){
-    html{
-        font-size: 12px;
-    }
+    // html{
+    //     font-size: 12px;
+    // }
 }
 
 @media all and (max-width:480px){
-    html{
-        font-size: 10px;
-    }
+    // html{
+    //     font-size: 10px;
+    // }
 }
 
-@media all and (max-width:359px){
-    html{
-        font-size: 9px;
-    }
-}
-
-@media all and (max-width:320px){
-    html{
-        font-size: 8px;
-    }
-}
